@@ -8,5 +8,6 @@
     <string name="thisapp">This app runs some common sorting algorithms on a large array of random numbers every time you hit run.</string>
     <string name="randomnumbers">The times are listed as each algorithm completes and an average is saved over all the sessions</string>
     <string name="home_okay">OK</string>
+    <string name="title_activity_algo">AlgoActivity</string>
 
 </resources>

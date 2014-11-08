@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.content.Intent;
 
 public class MainActivity extends Activity {
 
@@ -21,8 +21,11 @@ public class MainActivity extends Activity {
         {
             public void onClick(View v)
             {
-                TextView titletext = (TextView) findViewById(R.id.welcomeTitle);
-                titletext.setText("Clicked!");
+                Intent intent = new Intent(v.getContext(), AlgoActivity.class);
+                //EditText editText = (EditText) findViewById(R.id.edit_message);
+                //String message = editText.getText().toString();
+                //intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
             }
         });
     }
