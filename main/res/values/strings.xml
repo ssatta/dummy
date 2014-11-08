@@ -4,5 +4,9 @@
     <string name="app_name">My Application</string>
     <string name="hello_world">Hello ssatta!</string>
     <string name="action_settings">Settings</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="thisapp">This app runs some common sorting algorithms on a large array of random numbers every time you hit run.</string>
+    <string name="randomnumbers">The times are listed as each algorithm completes and an average is saved over all the sessions</string>
+    <string name="home_okay">OK</string>
 
 </resources>
