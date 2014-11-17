@@ -6,7 +6,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.content.Intent;
 
 public class MainActivity extends Activity {
@@ -21,10 +20,7 @@ public class MainActivity extends Activity {
         {
             public void onClick(View v)
             {
-                Intent intent = new Intent(v.getContext(), AlgoActivity.class);
-                //EditText editText = (EditText) findViewById(R.id.edit_message);
-                //String message = editText.getText().toString();
-                //intent.putExtra(EXTRA_MESSAGE, message);
+                Intent intent = new Intent(v.getContext(), ListActivityExample.class);
                 startActivity(intent);
             }
         });

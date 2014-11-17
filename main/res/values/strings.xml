@@ -9,5 +9,12 @@
     <string name="randomnumbers">The times are listed as each algorithm completes and an average is saved over all the sessions</string>
     <string name="home_okay">OK</string>
     <string name="title_activity_algo">AlgoActivity</string>
+    <string name="run_btn">Run</string>
+    <string name="testname">a</string>
+    <string name="title_activity_list_activity_example">ListActivityExample</string>
+    <string name="runAlgoBtn">Test Speed</string>
+    <string name="algonamecol">Algo Name</string>
+    <string name="avg_col">Average Time</string>
+    <string name="time_col">Time on this run</string>
 
 </resources>

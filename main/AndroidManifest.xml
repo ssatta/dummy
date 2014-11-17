@@ -17,12 +17,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.sattas.myapplication.AlgoActivity"
-            android:label="@string/title_activity_algo"
-            android:parentActivityName="com.example.sattas.myapplication.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sattas.myapplication.MainActivity" />
+            android:name="com.example.sattas.myapplication.ListActivityExample"
+            android:label="@string/title_activity_list_activity_example" >
         </activity>
     </application>
 
