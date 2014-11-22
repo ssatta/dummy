@@ -1,11 +1,12 @@
 package com.example.sattas.myapplication;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListActivityExample extends ListActivity {
 
@@ -15,8 +16,22 @@ public class ListActivityExample extends ListActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_list_activity_example);
-        ArrayAdapter<AlgoDisplayRow> adapter = new InteractiveArrayAdapter(this,
-                getModel());
+        final InteractiveArrayAdapter adapter = new InteractiveArrayAdapter(this,
+                new ArrayList<AlgoDisplayRow>());
+
+        Button runButton = (Button) findViewById(R.id.button);
+        runButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //adapter.addAll(getModel());
+
+                AlgoCompute computer = new AlgoCompute();
+                computer.setAdapter(adapter);
+                computer.execute("dummy");
+
+
+            }
+        });
         setListAdapter(adapter);
     }
 
@@ -33,7 +48,7 @@ public class ListActivityExample extends ListActivity {
         return list;
     }
 
-    private AlgoDisplayRow get(String s) {
+    public AlgoDisplayRow get(String s) {
         return new AlgoDisplayRow(s, 0, 0);
     }
 
