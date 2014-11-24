@@ -23,11 +23,35 @@ public class ListActivityExample extends ListActivity {
         runButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //adapter.addAll(getModel());
 
-                AlgoCompute computer = new AlgoCompute();
-                computer.setAdapter(adapter);
-                computer.execute("dummy");
+                int randomArraySize = 1000;
+                int[] randomArray = new int[randomArraySize];
+                for(int i = 0; i < randomArraySize; ++i)
+                {
+                    int rand = ((int)(Math.random() * randomArraySize)) + 1;
+                    randomArray[i] = rand;
+                }
+
+                int [] copy = new int[randomArray.length];
+                System.arraycopy( randomArray, 0, copy, 0, randomArray.length );
+
+                int [] copy2 = new int[randomArray.length];
+                System.arraycopy( randomArray, 0, copy2, 0, randomArray.length );
+
+                AlgoCompute bubbleSortComputer = new AlgoCompute();
+                bubbleSortComputer.setAdapter(adapter);
+                bubbleSortComputer.setRandomArray(randomArray);
+                bubbleSortComputer.execute("bubbleSort");
+
+                AlgoCompute insertionSortComputer = new AlgoCompute();
+                insertionSortComputer.setAdapter(adapter);
+                insertionSortComputer.setRandomArray(copy);
+                insertionSortComputer.execute("insertionSort");
+
+                AlgoCompute quickSortComputer = new AlgoCompute();
+                quickSortComputer.setAdapter(adapter);
+                quickSortComputer.setRandomArray(copy2);
+                quickSortComputer.execute("quickSort");
 
 
             }
